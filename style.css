@@ -31,12 +31,17 @@
 }
 
 .widget {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     margin-bottom: 20px;
-    flex-basis: 33%;
-    border: 1px solid #ccc; /* Add this line */
+    flex-basis: 25%;
+    border: 1px solid #ccc;
     padding: 10px;
     box-sizing: border-box;
 }
+
 
 h2 {
     margin-top: 0;
