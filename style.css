@@ -26,10 +26,16 @@
 .content {
     flex-grow: 1;
     padding: 20px;
+    display: flex; /* Add this line */
+    flex-wrap: wrap; /* Add this line */
 }
 
 .widget {
     margin-bottom: 20px;
+    flex-basis: 33%;
+    border: 1px solid #ccc; /* Add this line */
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 h2 {
