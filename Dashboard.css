@@ -1,0 +1,40 @@
+#speedometer {
+    width: 200px;
+    height: 200px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 104px;
+    font-weight: bold;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px; /* Adjust this value as needed for spacing between widgets */
+}
+.widget-title {
+    background-color: lightgrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* Add any additional styles for the title section */
+}
+.widget {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-basis: 25%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.gears{
+    font-size: 24px;
+    font-family: "Segoe UI Emoji", "Noto Color Emoji", "Twemoji", "Arial", sans-serif;
+}

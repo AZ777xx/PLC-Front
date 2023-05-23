@@ -1,0 +1,51 @@
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #ADD8E6;
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+
+
+
+h2 {
+    margin-top: 0;
+}
+
+
+.upper-bar {
+    background-color: #4169E1;
+    height: 45px;
+    display: flex;
+    align-items: baseline;
+    font-size: 32px;
+    font-weight: bold;
+    justify-content: space-between;
+}
+
+#current-time {
+    margin-left: auto;
+    margin-right: 20px;
+}
+.subtitle{
+    font-size: 12px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+.title {
+    margin-left: 20px;
+}

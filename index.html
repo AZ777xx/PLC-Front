@@ -1,46 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
 
 <div class="upper-bar">
-    <div class="title">Example title</div>
+    <div class="title">PLC-Front</div>
+    <div class="subtitle"id="subtitle">NaN</div>
     <div id="current-time"></div>
 </div>
 <div class="container">
     <div class="sidebar">
         <ul class="menu">
-            <li><a href="#">Category 1</a></li>
+            <li><a href="#">Dashboard</a></li>
             <li><a href="#">Category 2</a></li>
             <li><a href="#">Category 3</a></li>
         </ul>
     </div>
     <div class="content">
-        <div class="widget">
-            <h2>Category 1</h2>
-            <form>
-                <label id="value1">Value:</label>
-                <label id="currentValue1">Nan</label>
-                <input type="text" id="value1" name="value1">
-                <button type="submit">Submit</button>
-            </form>
-            <form>
-                <label id="value2">Value:</label>
-                <label id="currentValue2">Nan</label>
-                <input type="text" id="value2" name="value2">
-                <button type="submit">Submit</button>
-            </form>
-        </div>
-        <div class="widget">
-            <h2>Speedometer/Clock</h2>
-            <div id="speedometer"></div>
-        </div>
+        <!-- GET CONTENT FROM A SEPERATE FILE HERE-->
     </div>
 </div>
-
-<script src="script.js"></script>
-
+<script src="loadContent.js"></script>
+<script src="index.js"></script>
 </body>
 </html>
