@@ -68,11 +68,52 @@ function StatusMotor() {
     }, 100)
 
 }
+function Statusfeedpump() {
+    var rotationAnglegear = 0;
+    var working = false
+    var randomNumber = Math.floor(Math.random() * 3 * 1000) + 1;
+    var i = 0;
+    setInterval(function () {
+        if (i >= randomNumber) {
+            randomNumber = Math.floor(Math.random() * 3 * 1000) + 1;
+            working = !working;
+            i = 0;
+        }
+        i = i + 10
+    }, 10)
+
+    setInterval(function () {
+        if (working) {
+            speedometerElementgear = document.getElementById("StatusFeedpump-Gear");
+            speedometerElementText = document.getElementById("StatusFeedpump-Text");
+            speedometerElementText.textContent = "Motor: START";
+            speedometerElementgear.style.transform = `rotate(${rotationAnglegear}deg)`;
+
+            rotationAnglegear += 2;
+
+            if (rotationAnglegear >= 360) {
+                rotationAnglegear = 0;
+            }
+            i = i + 10;
+            setTimeout(function () {
+            }, 10);
+
+        }
+    }, 10)
+    setInterval(function () {
+        if (!working) {
+            speedometerElementText = document.getElementById("StatusFeedpump-Text");
+            speedometerElementText.textContent = "Motor: STOP";
+        }
+    }, 100)
+
+}
 
 
 
 
 StatusMotor()
+Statusfeedpump()
 
 // Update currentValue1 every second
 setInterval(updateCurrentValue, 1000);
