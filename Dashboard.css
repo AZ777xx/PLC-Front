@@ -35,6 +35,9 @@
     box-sizing: border-box;
 }
 .gears{
+    justify-content: center;
+    align-items: center;
+    display: flex;
     font-size: 24px;
     font-family: "Segoe UI Emoji", "Noto Color Emoji", "Twemoji", "Arial", sans-serif;
 }

@@ -25,21 +25,54 @@ function updateSpeedometer() {
 
 // Get the gear label element
 
-var rotationAnglegear = 0;
 
 
-function updateGear() {
-    speedometerElementgear = document.getElementById("StatusMotor-Gear");
-    speedometerElementgear.style.transform = `rotate(${rotationAnglegear}deg)`;
 
-    rotationAnglegear += 2;
+function StatusMotor() {
+    var rotationAnglegear = 0;
+    var working = false
+    var randomNumber = Math.floor(Math.random() * 3 * 1000) + 1;
+    var i = 0;
+    setInterval(function () {
+        if (i >= randomNumber) {
+            randomNumber = Math.floor(Math.random() * 3 * 1000) + 1;
+            working = !working;
+            i = 0;
+        }
+        i = i + 10
+    }, 10)
 
-    if (rotationAnglegear >= 360) {
-        rotationAnglegear = 0;
-    }
+    setInterval(function () {
+        if (working) {
+                speedometerElementgear = document.getElementById("StatusMotor-Gear");
+                speedometerElementText = document.getElementById("StatusMotor-Text");
+                speedometerElementText.textContent = "Motor: START";
+                speedometerElementgear.style.transform = `rotate(${rotationAnglegear}deg)`;
+
+                rotationAnglegear += 2;
+
+                if (rotationAnglegear >= 360) {
+                    rotationAnglegear = 0;
+                }
+                i = i + 10;
+                setTimeout(function () {
+                }, 10);
+
+        }
+    }, 10)
+    setInterval(function () {
+        if (!working) {
+            speedometerElementText = document.getElementById("StatusMotor-Text");
+            speedometerElementText.textContent = "Motor: STOP";
+        }
+    }, 100)
+
 }
 
-setInterval(updateGear, 10);
+
+
+
+StatusMotor()
 
 // Update currentValue1 every second
 setInterval(updateCurrentValue, 1000);
