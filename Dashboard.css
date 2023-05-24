@@ -21,12 +21,13 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    padding-bottom: 0px;
     /* Add any additional styles for the title section */
 }
 .widget {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+
     align-items: center;
     margin-bottom: 20px;
     flex-basis: 25%;
@@ -40,4 +41,38 @@
     display: flex;
     font-size: 24px;
     font-family: "Segoe UI Emoji", "Noto Color Emoji", "Twemoji", "Arial", sans-serif;
+}
+
+.line {
+    border-top: 2px solid black;
+    width: 100%;
+}
+#Alarmstatus-bg{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4169E1;
+    height: 50px;
+}
+#Alarmstatus-label{
+    font-size: 24px;
+}
+.Seperationcontrol{
+    grid-column: span 3;
+}
+.Runninghours{
+    align-items: baseline;
+}
+.button-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+}
+
+.widget-button {
+    margin: 5px;
+    width: 33%;
 }

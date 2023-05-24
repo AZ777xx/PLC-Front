@@ -108,10 +108,45 @@ function Statusfeedpump() {
     }, 100)
 
 }
+function Alarmstatus(){
+    var alarm = false
+    var randomNumber = Math.floor(Math.random() * 3 * 1000) + 1;
+    var i =0
+    setInterval(function () {
+        if (i >= randomNumber) {
+            randomNumber = Math.floor(Math.random() * 3 * 1000) + 1;
+            alarm = !alarm;
+            i = 0;
+        }
+        i = i + 10
+    }, 10)
+    setInterval(function(){
+        if(alarm){
+            document.getElementById("Alarmstatus-bg").style.backgroundColor = "red"
+            document.getElementById("Alarmstatus-label").textContent = "ALARM"
+        }
+        if(!alarm){
+            document.getElementById("Alarmstatus-bg").style.backgroundColor = "green"
+            document.getElementById("Alarmstatus-label").textContent = "No alarms"
+        }
+    },100)
+}
+function Runninghours(){
+    var i = 0
+    setInterval(function(){
+        i=i+1
+        var seperatortime = document.getElementById("Seperatormotor-time").textContent;
+        seperatortime = separatortime = seperatortime.replace(/\d[\d\s\S]*$/, '');
+        var feedpumptime = seperatortime + i/100 + " h";
+        seperatortime = seperatortime + i*2/100 + " h"
+        document.getElementById("Seperatormotor-time").textContent = seperatortime;
+        document.getElementById("Feedpump-time").textContent = feedpumptime;
+    },100)
+}
 
 
-
-
+Runninghours()
+Alarmstatus()
 StatusMotor()
 Statusfeedpump()
 
