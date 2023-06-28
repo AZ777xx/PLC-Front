@@ -157,7 +157,7 @@ Seperatormotor_gauge.animationSpeed = 32; // set animation speed (32 is default 
 Seperatormotor_gauge.set(7); // set actual value
 
 //product pressure gauge
-var opts_pressure = Object.assign({}, opts_seperator);
+var opts_pressure = JSON.parse(JSON.stringify(opts_seperator));
 opts_pressure.staticLabels.labels= [0.5,1.0,1.5,2.0,2.5,3.0,4.0,5.0,6.0,7.0,10.0] ; // Print labels at these values
 opts_pressure.staticLabels.fractionDigits = 1;
 opts_pressure.staticZones= [
@@ -172,7 +172,7 @@ Productpressure_gauge.animationSpeed = 32;
 Productpressure_gauge.set(7);
 
 //product temp gauge
-var opts_temp = Object.assign({}, opts_pressure);
+var opts_temp = JSON.parse(JSON.stringify(opts_pressure));
 opts_temp.staticLabels.labels= [10,20,30,40,50,60,70,80,90,100,110,120] ; // Print labels at these values
 opts_temp.staticLabels.fractionDigits = 0;
 opts_temp.staticZones= [
