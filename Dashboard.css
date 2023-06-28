@@ -76,3 +76,6 @@
     margin: 5px;
     width: 33%;
 }
+.gauge-reading-label{
+    font-size: 24px;
+}
